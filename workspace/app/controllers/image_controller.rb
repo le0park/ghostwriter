@@ -4,6 +4,6 @@ class ImageController < ApplicationController
   end
   
   def output
-    
+    @s = "/images/result.png"
   end
 end

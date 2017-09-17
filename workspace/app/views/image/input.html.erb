@@ -1,5 +1,43 @@
-<h1>Image#input</h1>
+<!DOCTYPE html>
+<html>
+<body>
+<%= yield %>
+    <nav class="navbar" style="height:140px; background:#FFFFFF;">
+          <p class"logo" ><a href="/"><%=image_tag("ghostwriter_logo.png", 
+          style:"display:block;margin-left:auto;margin-right:auto;margin-bottom:25px;padding-top: 25px;padding-bottom: 25px;")%></a></p>
+    </nav>
+    <%= form_tag({controller: :main, action: :hello}, multipart: true) do %>
+		<header>
+			<div class="containter" style="height:720px; overflow-y:hidden;">
+			
+			<%=image_tag('1_step.png', style: "padding-top:55px; padding-bottom:85px;") %>
+			
+			<h1 style="font-family:'Helvatica LT compressed'; font-size:55pt; padding-bottom:55px;">STEP 1. Upload your hand writing.</h1>
+			
+			<h2 style="font-family:'Helvatica LT narrow; padding-top:55px;">Upload the picture of your hand written A to Z in lower case</h2>
+			<h2 style="font-family:'Helvatica LT narrow; padding-top:20px;">*Please write in one line*</h2>
+			
+      	<div id="boarder_input" style="position: relative;width:1024px; height:300px;margin: auto auto; padding-top:55px;">
+        	<input type="file" name="sentence" style="font-size:12pt"></input>
+		</div>
+      
+			
 
-<label for="abc1">Choose to file upload1.&nbsp;</label>
-<input name="abc1" type="file"></input>
 
+		</header>
+
+		<!-- The content of your page would go here. -->
+
+		<footer class="footer-distributed" style="background-color:#000000;">
+
+		  <div>
+		    <p style="text-align:center">
+		      <button type="submit" style="width:1920px; height:120px; border:none; font-family:'Helvatica LT compressed'; font-size:60pt; background-color:#000000; color:#ffffff;">NEXT</a>
+		    </p>
+		    
+		  </div>
+
+		</footer>
+		<% end %>
+</body>
+</html>

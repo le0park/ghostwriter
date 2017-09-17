@@ -1,5 +1,17 @@
-@import url('http://fonts.googleapis.com/css?family=Open+Sans:400,700');
 
+@font-face {
+  font-family: 'Helvatica LT compressed';
+  font-style: normal;
+  font-weight: 400;
+  src: url(/fonts/LTe50211.woff2) format('woff2');
+}
+
+@font-face {
+  font-family: 'Helvatica LT narrow';
+  font-style: normal;
+  font-weight: 400;
+  src: url(/fonts/LTe52134.woff2) format('woff2');
+}
 *{
 	padding:0;
 	margin:0;
@@ -10,12 +22,14 @@ html{
 }
 
 body{
-	font:14px/1.5 Arial, Helvetica, sans-serif;
+	font-family: 'Helvatica LT compressed';
+	font:14px/1.5 Arial, sans-serif;
+	overflow:hidden;
 }
 
 header{
 	text-align: center;
-	padding-top: 100px;
+	
 	margin-bottom:200px;
 }
 
@@ -93,8 +107,15 @@ footer{
 	position: fixed;
 	bottom: 0;
 }
-
+button:focus, input[type="button"]:focus{
+	outline: none;
+}
 @media (max-height:800px){
 	footer { position: static; }
 	header { padding-top:40px; }
 }
+::-webkit-scrollbar {width: 15px; height: 15px;  }
+::-webkit-scrollbar-button:start:decrement, 
+::-webkit-scrollbar-button:end:increment {display: block; width: 12px;height: 12px; background: url() rgba(179,179,179,1);}
+::-webkit-scrollbar-track {     background: rgba(179,179,179,1); }
+::-webkit-scrollbar-thumb {  background: rgba(0,0,0,1);  }

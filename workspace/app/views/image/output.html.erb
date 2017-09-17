@@ -1,38 +1,37 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>Typewriter</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  <%= csrf_meta_tags %>
-  
-	<link rel="stylesheet" href="css/demo.css">
-	<link rel="stylesheet" href="css/footer-distributed.css">
-	
-	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
-</head>
 <body>
 <%= yield %>
-    <nav class="navbar" style="height:100px; background:#FFFFFF; vertical-align=center">
-          <p class"logo" style="text-align:centered; padding:15px 0px" style="color:#cccccc"><h1 style="text-align:center; color:#cccccc">logos</h1></p>
-    </nav>
-		<header>
-
-			<h1><b>Finish!</b></h1>
-			<h2>Print of share your hand written text!</h2>
-			<p><%= image_tag('1.PNG') %>
-			<%= image_tag('1.PNG') %>
-			<%= image_tag('1.PNG') %> &nbsp;
-			</p>
-			<br>
+    <nav class="navbar" style="height:140px; background:#FFFFFF;">
+      <p class"logo" ><a href="/"><%=image_tag("ghostwriter_logo.png", 
+      style:"display:block;margin-left:auto;margin-right:auto;margin-bottom:25px;padding-top: 25px;padding-bottom: 25px;")%></a></p>
+   	 </nav>
+	<header>
+		<div class="container" style="height:940px; overflow-y:scroll;">
+			<h1 style="font-family:'Helvatica LT compressed'; font-size:55pt; \padding-top:55px;">Finish</h1>
+			<h2 style="font-family:'Helvatica LT narrow; padding-top:55px;">Print of share your hand written text!</h2>
 			
-			<%= image_tag('asdbgw.png') %>
-		  
+			<div class="container" style="width:1020px; border-color:rgba(0,0,0,0.25); margin: 0 auto;">
+				<p><%= image_tag('print_button.png', style:"padding-top:55px; padding-bottom: 48px;", usemap:"#share") %>
+				<map name="share">
+				    <area shape="rect" coords="0,55,55,110" href="#1" alt="Download">
+				    <area shape="rect" coords="140,55,195,110" href="#2" alt="Print">
+				    <area shape="rect" coords="260,45, 450,130" href="#3" alt="Share">
+				</map>
+				 &nbsp;
+				</p>
+				<br>
+				
+				<img src='<%=@s%>' style="width:1020px; height:1020px;" />
+			
+			</div>
+		</div>
+	  
 
 
-		</header>
+	</header>
 
-		<!-- The content of your page would go here. -->
+	<!-- The content of your page would go here. -->
 
 		
 </body>

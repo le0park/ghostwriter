@@ -2,14 +2,16 @@ Rails.application.routes.draw do
   get 'image/input'
 
   get 'main/hello'
-  post 'main/post_input'
+  post 'main/hello' => "main#hello", as: :upload
+  post 'main/post_input' => "main#post_input"
   get 'image/output'
+  
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
   # root 'welcome#index'
-  root 'main#hello'
+  root 'image#input'
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 
